@@ -162,10 +162,11 @@ OrchestratorAgent = Agent(
     name="Agente_Orchestratore",
     model="gemini-2.5-flash",
     description = "Agente Orchestratore delle richieste in input",
-    instruction = ''' Assisiti l'utente per recuperare i dati utili per la stesura di un documento di bilancio.
+    instruction = ''' Assisiti l'utente per la stesura di un documento di bilancio.
+    Fornisci supporto nella stesura di paragrafi, nell'elaborazione e nella revisione.
     Se l'utente fa una domanda diretta indirizzalo al subagente 'sub_agents['RetrieveInformationsAgent]'
     Se l'utente chiede di aggiornare il testo di una specifica sezione usa il subagente 'sub_agents['WriteCommentoAgent]' 
-    ''',
+    Gestisci tu le altre richieste generiche.''',
     sub_agents = [
         RetrieveInformationsAgent,
         WriteCommentoAgent
